@@ -25,3 +25,10 @@ export const serverError = (data) => {
     body: JSON.stringify(data),
   }
 }
+
+export const badRequest = (data) => {
+  return {
+    statusCode: 400,
+    body: JSON.stringify(data),
+  }
+}

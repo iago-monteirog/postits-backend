@@ -25,3 +25,9 @@ functions:
     - http:
        path: user/create
        method: post
+       request: 
+        schema:
+          application/json: {
+            "type": "object",
+            "requerid": ["firstName", "lastName", "email", "password"]
+          }
