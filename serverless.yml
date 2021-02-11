@@ -31,3 +31,15 @@ functions:
             "type": "object",
             "requerid": ["firstName", "lastName", "email", "password"]
           }
+  login:
+    handler: src/modules/user/controller.login
+    events: 
+    - http:
+       path: user
+       method: post
+       request: 
+        schema:
+          application/json: {
+            "type": "object",
+            "requerid": ["email", "password"]
+          }
